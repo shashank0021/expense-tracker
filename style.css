@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #232836;
+   
+}
+body{
+    background-color: #4070f4   ;  
+    
+} 
+.wrapper{
+    width: 100%;
+    display: flex;  
+}
+.first{
+    border-radius: 20px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 2px 2px 20px #29524A;
+    margin: 1rem 1rem 1rem 1rem;
+    height: 95vh;
+    width: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile{
+    padding-top: 2rem ;
+    padding-bottom: 10rem;
+}
+.img{
+    padding-left: 25px;
+}
+.profile img{
+    border-radius: 50%;
+}
+.profile h2{
+    text-shadow: rgb(165, 158, 130) 1px 0 10px;
+    font-size: 20px;
+}
+.tag ul li{
+list-style-type: none;
+padding-bottom: 1.5rem ;
+
+}
+.tag ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+}
+.first button{
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow:  5px 5px 20px rgb(113, 113, 111);
+    position: absolute;
+    bottom: 80px;    
+    background-color: #8b8b8b;
+}
+
+
+
+.second{
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px #29524A;
+ 
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 1rem 1rem 1rem;
+
+}
+.chart{
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px #06070E;
+    width: 80%;
+    height: 45%;
+    margin-top: 15px;
+    margin-bottom: 15px ;
+}
+.expense-list{
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px #06070E;
+    width: 80%;
+    height: 45%;
+    margin-top: 15px;
+    margin-bottom: 15px ;
+
+}
+
+
+
+.third{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px #29524A;
+    margin: 1rem 1rem 1rem 1rem;
+    align-items: center;
+    width: 50%;
+
+}
+.piechart{
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px #06070E;
+    width: 80%;
+    height: 45%;
+    margin-top: 15px;
+    margin-bottom: 15px ;   
+
+}
+.tax-detail{
+    display: flex;
+    flex-direction: column;
+}
+.tax-detail h1{
+    text-align: center;
+    padding-top: 30%;
+    padding-bottom: 2rem;
+}
+.tax-detail strong{
+    padding-bottom: 1.5rem;
+}
+.tax-detail strong input{
+    border-style: none;
+    background-color: transparent;
+    padding-left: 1rem;
+    
+}
+
