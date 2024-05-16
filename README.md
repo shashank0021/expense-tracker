@@ -1,4 +1,4 @@
-# Pepsi UI Project
+# Expense Tracker Project
 
 Welcome to the Expense Tarcker Project! This project provides an overview of the official Pepsi website.
 
@@ -6,7 +6,7 @@ Welcome to the Expense Tarcker Project! This project provides an overview of the
 
 Check out the live demo [here](https://github.com/shashank0021/expense-tracker.git).
 
-## Webpage name - Leadership
+## Webpage name - Expense Tracker
 
 This Page tells us about the Leaders of pepsi organization.
 
@@ -23,15 +23,15 @@ This Page tells us about the Leaders of pepsi organization.
 
 ## Screenshots
 
-![Screenshot](https://github.com/nawabkhan89646/teamPepsiGeekathon/blob/46cf73e79925f93223118db0eeed308e14eec524/Shashank/global%20code%20of%20conduct/screenshot/Screenshot%202024-03-19%20124615.png)
+![Screenshot](https://github.com/shashank0021/expense-tracker/blob/de17018afef0554f1605e568cc9bde9446ead174/Screenshot%202024-05-16%20233741.png)
 
-![Screenshot](https://github.com/nawabkhan89646/teamPepsiGeekathon/blob/46cf73e79925f93223118db0eeed308e14eec524/Shashank/global%20code%20of%20conduct/screenshot/Screenshot%202024-03-19%20124643.png)
+![Screenshot](https://github.com/shashank0021/expense-tracker/blob/de17018afef0554f1605e568cc9bde9446ead174/Screenshot%202024-05-16%20233746.png)
 
-![Screenshot](https://github.com/nawabkhan89646/teamPepsiGeekathon/blob/46cf73e79925f93223118db0eeed308e14eec524/Shashank/global%20code%20of%20conduct/screenshot/Screenshot%202024-03-19%20124708.png)
+![Screenshot](https://github.com/shashank0021/expense-tracker/blob/de17018afef0554f1605e568cc9bde9446ead174/Screenshot%202024-05-16%20233805.png)
 
-![Screenshot](https://github.com/nawabkhan89646/teamPepsiGeekathon/blob/46cf73e79925f93223118db0eeed308e14eec524/Shashank/global%20code%20of%20conduct/screenshot/Screenshot%202024-03-19%20124745.png)
+![Screenshot](https://github.com/shashank0021/expense-tracker/blob/de17018afef0554f1605e568cc9bde9446ead174/Screenshot%202024-05-16%20233815.png)
 
-![Screenshot](https://github.com/nawabkhan89646/teamPepsiGeekathon/blob/46cf73e79925f93223118db0eeed308e14eec524/Shashank/global%20code%20of%20conduct/screenshot/Screenshot%202024-03-19%20124806.png)
+![Screenshot](https://github.com/shashank0021/expense-tracker/blob/de17018afef0554f1605e568cc9bde9446ead174/Screenshot%202024-05-16%20233824.png)
 
 
 
