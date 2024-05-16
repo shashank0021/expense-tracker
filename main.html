@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
     <title>Expense Tracker</title>
 </head>
 <body>
@@ -13,9 +15,9 @@
         <section class="first">
             <div class="profile">
                 <div class="img">
-                    <img src="/assets/download.jpeg" height="40px" width="40px">
+                    <img src="download.jpeg" height="40px" width="40px">
                 </div>
-                <h2>Hello, User</h2>
+                <h2 >Hello, User</h2>
 
             </div>
         
@@ -23,40 +25,113 @@
             <aside class="tag">
                 <ul>
                     <li><a href="main.html">DaseBoard</a></li>
-                    <li><a href="">AI</a></li>
-                    <li><a href="">Chart</a></li>
-                    <li><a href="">Tax</a></li>
+                    <li><a href="ai.html">AI</a></li>
+                    <li><a href="chart.html">CHART</a></li>
                 </ul>
             </aside>
-            <button class="Logout" >Logout</button>
+            <button id="payButton" >PAY NOW</button>
         </section>
 
 
 
+
+
+        
         <section class="second">
-            <div class="chart" >
-            </div>
-            <div class="expense-list"  >
-
-            </div>
-        </section>
 
 
 
+            <div class="ledger">
+                <h2>Income Expense Tracker</h2>
+                <h4>Your Balance</h4>
+                <h1 id="balance">₹ 0.00</h1>
+                <div class="inc-exp-container">
+                  <div class="inc">
+                    <h4>Income</h4>
+                    <p id="inc-amt" class="amt plus">₹ 0.00</p>
+                  </div>
+                  <div class="exp">
+                    <h4>Expense</h4>
+                    <p id="exp-amt" class="amt minus">₹ 0.00</p>
+                  </div>
+                </div>
+                <form action="#" id="form">
+                  <div class="form-control">
+                    <label for="desc">Description</label>
+                    <input type="text" name="desc" id="desc" placeholder="Enter Description" />
+                  </div>
+        
+                  <div class="form-control">
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" id="amount" placeholder="Amount" />
+                  </div>
+                  <button class="btn" type="submit">Add Transaction</button>
+                </form>
+              </div>
+              <div class="transaction">
+                <h3>Transaction Details</h3>
+                <ul class="trans" id="trans">
+                  <li class="exp">
+                    Insurance
+                    <span>-1500</span>
+                    <button class="btn-del">x</button>
+                  </li>
+                  <li class="inc">
+                    Salary
+                    <span>35000</span>
+                    <button class="btn-del">x</button>
+                  </li>
+                  <li class="exp">
+                    Food
+                    <span>-350</span>
+                    <button class="btn-del">x</button>
+                  </li>
+                </ul>
+              </div>
 
-        <section class="third">
-            <div class="piechart"  >
-
-            </div>
-            <div class="tax-detail">
-                <h1>TAX Deatil</h1>
-                <strong>TOATL INCOME: <input type="text" value="0"></strong>
-                <strong>Tax to pay: <input type="text" value="0"></strong>
-                <strong>Amount left after tax: <input type="text" value="0"></strong>
-
-            </div>
-        </section>
-    </div>
     
+
+        </section>
+
+
+
+
+
+
+    </div>
+    <script>
+        document.getElementById('payButton').addEventListener('click', function () {
+            var options = {
+                key: 'rzp_test_DYH0fycQiEAjgB', 
+                amount: 1000, 
+                currency: 'INR', 
+                name: ' Payment',
+                description: 'Test Payment',
+                image: 'https://example.com/logo.png', 
+                handler: function (response) {
+                    alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+                   
+                },
+                prefill: {
+                    name: 'John Doe',
+                    email: 'john.doe@example.com', 
+                    contact: '9999999999'
+                },
+                notes: {
+                    address: 'Razorpay Corporate Office' 
+                },
+                theme: {
+                    color: '#F37254'
+                }
+            };
+
+            var rzp = new Razorpay(options);
+            rzp.open();
+        });
+    </script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

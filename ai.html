@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+     font-family: 'popins',sans-serif;
+     background-color: #43578f;
+     
+      
+        }
+        h1{
+            color: white;
+        text-align: center;
+        margin: 2rem;
+    font-size: 3rem;
+        }
+        #main{
+       
+
+            height:50rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction:row;
+        }
+        #output{
+            background-color: #fff;
+            color: black;
+            font-size: 1.4rem;
+            height:20rem;width:30rem;
+            margin-right: 5rem;
+            margin-right: 5rem;
+            overflow-y: auto; /* Add scroll when content overflows */
+            padding: 1rem;
+            line-height: 2.6rem;
+            border-radius: 20px;
+        }
+        textarea{
+            overflow: hidden;
+            padding: 5px;
+            border-radius: 20px;
+          
+        
+        }
+        button{
+            width: 8rem;
+            background-color: #080460;
+            color: white;
+            font-size: 1rem;
+            padding: 6px 12px;
+            border-radius: 10px;
+            border: none;
+
+        }
+        @media (max-width:800px) {
+#main{
+    flex-direction: column;
+}
+#output,textarea{
+    margin: 15px;
+
+}
+
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1>Ask Ai to Your Finance</h1>    
+    <div id="main" style="">
+        <div id="output" style=" "></div>
+        <div class="textare">
+
+            <textarea name="" id="input" cols="50" rows="20" placeholder="Ask you expense with ai"></textarea>
+        </div>
+    
+  
+<br>
+            <button id="Button" style="margin-left:4rem; padding:1rem;">Submit</button>
+     
+
+</div>
+    <script type="importmap">
+        {
+            "imports": {
+              "@google/generative-ai": "https://esm.run/@google/generative-ai"
+            }
+          }
+        </script>
+</body>
+<script type="module">
+    const input = document.querySelector("#input");
+    const Button = document.querySelector("#Button");
+    const output = document.querySelector("#output");
+
+    import { GoogleGenerativeAI } from "@google/generative-ai";
+
+    let API_KEY = "AIzaSyDuNs9E9hOSgdjsls4he848bU_mXY-aRcU";
+
+    const genAI = new GoogleGenerativeAI(API_KEY);
+
+    async function run(prompt) {
+        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        const text = response.text();
+        console.log(text);
+        output.innerHTML = "";
+        output.innerHTML = text;
+    }
+
+    Button.addEventListener("click", () => {
+        const userInput = input.value.trim(); 
+        run(input.value);
+        if (userInput !== "") {
+            run(userInput);
+        } else {
+            alert("Please enter a prompt before submitting.");
+        }
+        
+    });
+    </script>
+</body>
+</html>

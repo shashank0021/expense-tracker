@@ -38,6 +38,7 @@ body{
 .profile h2{
     text-shadow: rgb(165, 158, 130) 1px 0 10px;
     font-size: 20px;
+    margin-bottom: 3rem;
 }
 .tag ul li{
 list-style-type: none;
@@ -58,76 +59,170 @@ padding-bottom: 1.5rem ;
     background-color: #8b8b8b;
 }
 
-
-
-.second{
+.container {
+    width: 800px;
+    height: 600px;
     background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 2px 2px 20px #29524A;
- 
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     display: flex;
-    width: 60%;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem 1rem 1rem 1rem;
-
-}
-.chart{
-    border-radius: 10px;
-    box-shadow: 2px 2px 20px #06070E;
+    user-select: none;
+  }
+  
+  .second{
     width: 80%;
-    height: 45%;
-    margin-top: 15px;
-    margin-bottom: 15px ;
-}
-.expense-list{
-    border-radius: 10px;
-    box-shadow: 2px 2px 20px #06070E;
-    width: 80%;
-    height: 45%;
-    margin-top: 15px;
-    margin-bottom: 15px ;
+    margin-top: 1rem;
 
-}
-
-
-
-.third{
+  }
+  .ledger {
+    background-color: #dee7fb;
+    padding: 20px;
+    flex: 1;
+    color: white;
+    border-radius: ;
+  }
+  .ledger h2 {
+    text-transform: uppercase;
+    color: #feca57;
+  }
+  .ledger h2,
+  .ledger h4,
+  .ledger h1 {
+    font-weight: 400;
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  .inc-exp-container {
     display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 2px 2px 20px #29524A;
-    margin: 1rem 1rem 1rem 1rem;
-    align-items: center;
-    width: 50%;
-
-}
-.piechart{
-    border-radius: 10px;
-    box-shadow: 2px 2px 20px #06070E;
-    width: 80%;
-    height: 45%;
-    margin-top: 15px;
-    margin-bottom: 15px ;   
-
-}
-.tax-detail{
-    display: flex;
-    flex-direction: column;
-}
-.tax-detail h1{
+    padding: 5px;
+    gap: 10px;
+  }
+  .inc-exp-container div {
     text-align: center;
-    padding-top: 30%;
-    padding-bottom: 2rem;
-}
-.tax-detail strong{
-    padding-bottom: 1.5rem;
-}
-.tax-detail strong input{
-    border-style: none;
-    background-color: transparent;
-    padding-left: 1rem;
-    
-}
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 18px;
+    flex: 1;
+    border-radius: 2px;
+  }
+  
+  .inc-exp-container div p {
+    font-size: 22px;
+  }
+  .inc-exp-container div.inc {
+    border: 3px solid #1dd1a1;
+    color: #1dd1a1;
+  }
+  .inc-exp-container div.exp {
+    border: 3px solid #ee5253;
+    color: #ee5253;
+  }
+  
+  #form {
+    padding: 5px;
+    margin-top: 20px;
+  }
+  .form-control {
+    margin-top: 10px;
+  }
+  
+  label {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    border: 1px solid #dedede;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    border-radius: 2px;
+  }
+  
+  .btn {
+    background-color: #2e86de;
+    color: white;
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px;
+    font-size: 16px;
+    border: 0;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+  .transaction {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  
+  .transaction h3 {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 5px;
+  }
+  
+  .trans {
+    list-style-type: none;
+  }
+  .trans li {
+    background-color: #fff;
+    color: #333;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .trans li.inc {
+    border-left: 5px solid #1dd1a1;
+  }
+  .trans li.exp {
+    border-left: 5px solid #ee5253;
+  }
+  .btn-del {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-weight: 600;
+    color: #fff;
+    background-color: #e74c3c;
+    border: none;
+    font-size: 18px;
+    line-height: 20px;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  .trans li:hover .btn-del {
+    opacity: 1;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #2e86de;
+    border-radius: 8px;
+  }
+
 
